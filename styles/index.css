@@ -1,0 +1,221 @@
+/* Thème noir & blanc : fond crème pointillé, Space Mono, cadres à ombre décalée */
+:root {
+  --ink: #111111;
+  --paper: #f5f4f0;
+  --card: #ffffff;
+  --muted: #555555;
+  --shadow-grey: #a3a3a3;
+  --dot: #d6d4cc;
+}
+
+.slidev-layout {
+  background-color: var(--paper);
+  background-image: radial-gradient(var(--dot) 1.2px, transparent 1.2px);
+  background-size: 28px 28px;
+  color: var(--ink);
+  font-family: 'Space Mono', monospace;
+  padding: 2.2rem 3.5rem;
+}
+
+.slidev-layout h1,
+.slidev-layout h2,
+.slidev-layout h3 {
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  color: var(--ink);
+}
+
+.slidev-layout h1 {
+  font-size: 1.6rem;
+  line-height: 1.2;
+  margin-bottom: 0.4rem;
+}
+
+.slidev-layout h2 {
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.slidev-layout p,
+.slidev-layout li {
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+.slidev-layout strong {
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 4px;
+}
+
+.subtitle {
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+/* --- Blocs --- */
+.card {
+  background: var(--card);
+  border: 3px solid var(--ink);
+  box-shadow: 8px 8px 0 var(--ink);
+  padding: 1rem 1.2rem;
+}
+
+.card-dark {
+  background: var(--ink);
+  color: #fff;
+  box-shadow: 8px 8px 0 var(--shadow-grey);
+  padding: 1.1rem 1.4rem;
+}
+
+.card-dark h1,
+.card-dark h2,
+.card-dark strong {
+  color: #fff;
+}
+
+.statement {
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Étiquette inline noire, comme les mots-clés du PDF */
+.hl {
+  display: inline-block;
+  background: var(--ink);
+  color: #fff;
+  padding: 0.05rem 0.5rem;
+  box-shadow: 4px 4px 0 var(--shadow-grey);
+}
+
+.tag {
+  display: inline-block;
+  border: 2px solid var(--ink);
+  box-shadow: 3px 3px 0 var(--ink);
+  background: var(--card);
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.1rem 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.strike {
+  text-decoration: line-through;
+  color: var(--muted);
+}
+
+/* Cadre d'image en niveaux de gris */
+.frame {
+  border: 3px solid var(--ink);
+  box-shadow: 8px 8px 0 var(--ink);
+  background: var(--card);
+  padding: 0.4rem;
+}
+
+.frame img {
+  filter: grayscale(1);
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.caption {
+  font-size: 0.6rem;
+  color: var(--muted);
+  text-align: center;
+  margin-top: 0.6rem;
+}
+
+/* Question à lancer en amphi */
+.question {
+  background: var(--card);
+  border: 3px solid var(--ink);
+  box-shadow: 8px 8px 0 var(--ink);
+  padding: 0.9rem 1.2rem;
+  font-weight: 700;
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+.question::before {
+  content: '? À VOUS';
+  display: block;
+  width: fit-content;
+  background: var(--ink);
+  color: #fff;
+  font-size: 0.65rem;
+  padding: 0.05rem 0.5rem;
+  margin-bottom: 0.5rem;
+  box-shadow: 3px 3px 0 var(--shadow-grey);
+}
+
+.question.big {
+  font-size: 1.5rem;
+  padding: 1.4rem 1.8rem;
+}
+
+/* Gros chiffre */
+.figure {
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+/* Séparateur de section */
+.section-num {
+  font-size: 0.8rem;
+  color: var(--muted);
+  letter-spacing: 0.2em;
+}
+
+/* Layout center : tout centré, questions à largeur fixe */
+.slidev-layout.center {
+  place-items: center;
+}
+
+.slidev-layout.center .question.big {
+  width: 46rem;
+}
+
+.slidev-layout.center .question.big,
+.slidev-layout.center .card-dark {
+  margin-inline: auto;
+}
+
+/* Cartes compactes pour les slides denses */
+.card.compact {
+  padding: 0.5rem 1rem;
+}
+
+.card.compact .tag {
+  margin-bottom: 0.2rem;
+}
+
+.slidev-layout.center > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card.compact p {
+  margin: 0.2rem 0;
+}
+
+.question.small {
+  font-size: 0.8rem;
+  padding: 0.6rem 0.9rem;
+  line-height: 1.4;
+}
+
+.question.small::before {
+  margin-bottom: 0.3rem;
+}
