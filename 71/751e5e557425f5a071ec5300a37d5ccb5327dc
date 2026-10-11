@@ -1,0 +1,23 @@
+slides.md
+  s_d3d61d55729d9f::t_3640f33bce7e6d 735-737
+  s_d3d61d55729d9f::t_802bd485962597 672-673,676-693,695-704,707-714,717-734
+  s_d3d61d55729d9f::t_65884803374cb4 674-675,694,705-706,715-716
+styles/index.css
+  s_d3d61d55729d9f::t_802bd485962597 222-237
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "71751e5e557425f5a071ec5300a37d5ccb5327dc",
+  "prompts": {},
+  "sessions": {
+    "s_d3d61d55729d9f": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "0ea3b058-4c26-4d75-832e-f08986d117d0",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Yoan Thirion <yoan.thirion@gmail.com>"
+    }
+  }
+}
