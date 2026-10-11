@@ -219,3 +219,19 @@
 .question.small::before {
   margin-bottom: 0.3rem;
 }
+
+/* Blocs de code : cadre noir à ombre décalée */
+.slidev-layout .slidev-code-wrapper {
+  border: 3px solid var(--ink);
+  box-shadow: 6px 6px 0 var(--ink);
+  margin: 0.4rem 0 0;
+}
+
+.slidev-layout .slidev-code {
+  background: var(--card) !important;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.62rem !important;
+  line-height: 1.45 !important;
+  padding: 0.7rem 0.9rem !important;
+  border-radius: 0 !important;
+}

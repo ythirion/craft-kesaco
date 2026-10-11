@@ -669,6 +669,72 @@ Retour au tableau : quels mots ajouteriez-vous, ou retireriez-vous&nbsp;?
 
 ---
 
+# Du code pour des humains
+
+<div class="grid grid-cols-5 gap-8 mt-2">
+<div class="col-span-2">
+
+<div class="tag">avant</div>
+
+```ts
+function calc(c: any, d: number) {
+  let x = 0
+  for (let i = 0; i < c.o.length; i++) {
+    if (c.o[i].s == 2) continue
+    x += c.o[i].p * c.o[i].q
+  }
+  if (c.t == 1 && d - c.d > 365) x = x * 0.9
+  return x
+}
+```
+
+<div class="question small mt-6">Que fait cette fonction&nbsp;?</div>
+
+</div>
+<div v-click class="col-span-3">
+
+<div class="tag">après</div>
+
+```ts
+const LOYALTY_DISCOUNT = 0.1
+const ONE_YEAR_IN_DAYS = 365
+
+function orderTotal(customer: Customer, today: Day) {
+  const subtotal = customer.orderLines
+    .filter(line => !line.isCancelled())
+    .reduce((sum, line) =>
+      sum + line.unitPrice * line.quantity, 0)
+
+  return isLoyal(customer, today)
+    ? subtotal * (1 - LOYALTY_DISCOUNT)
+    : subtotal
+}
+
+function isLoyal(customer: Customer, today: Day) {
+  return customer.isPremium()
+    && daysBetween(customer.memberSince, today)
+       > ONE_YEAR_IN_DAYS
+}
+```
+
+</div>
+</div>
+
+<div v-click class="card-dark statement mt-5 py-2 text-sm">
+« N'importe qui peut écrire du code qu'une machine comprend.<br/>Les bons développeur·ses écrivent du code que les humains comprennent. »
+</div>
+
+<div v-after class="caption">d'après Martin Fowler · Refactoring, 1999</div>
+
+<!--
+Laisser les étudiant·es chercher ce que fait la version "avant" (1 min) : c'est le signe que le code n'est pas écrit pour des humains.
+Réponse : le total d'une commande, sans les lignes annulées (s == 2), avec 10 % de remise pour les client·es premium (t == 1) inscrit·es depuis plus d'un an.
+Clic 1 : même comportement, mais les noms racontent le métier. Plus de nombres magiques, plus de commentaires nécessaires.
+Clic 2 : la citation. On lit le code bien plus souvent qu'on ne l'écrit.
+-->
+
+---
+
 # Et maintenant&nbsp;?
 
 <div class="grid grid-cols-2 gap-8 mt-8">
