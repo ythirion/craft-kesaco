@@ -23,7 +23,6 @@ exportFilename: craft-kesaco
   </div>
   <div class="w-72 flex flex-col gap-6">
     <div class="card text-right">
-      <div class="tag">BUT 3 · cours magistral</div>
       <div class="font-bold">YOAN THIRION</div>
     </div>
     <div class="text-[0.6rem] text-right" style="color:#555">
